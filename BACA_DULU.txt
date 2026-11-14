@@ -1,0 +1,5 @@
+MISI SI PARI — VERSI 4
+
+Perbaikan Misi 4: siswa bebas menghubungkan semua pasangan organisme tanpa pemberitahuan benar/salah saat memilih. Penilaian dilakukan ketika tombol Periksa Jawaban ditekan. Hubungan yang salah, kurang, atau berlebih menyebabkan jawaban belum tepat. Hubungan dapat dibatalkan atau dihapus sebelum diperiksa.
+
+Jalankan index.html melalui Chrome atau Edge.

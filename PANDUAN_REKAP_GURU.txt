@@ -1,0 +1,20 @@
+PANDUAN MENGHUBUNGKAN GAME MISI SI PARI KE GOOGLE SHEETS GURU
+
+1. Masuk ke Google Sheets dengan akun guru, buat spreadsheet baru: Rekap Nilai Misi Si Pari.
+2. Pilih Ekstensi > Apps Script. Hapus kode awal dan salin isi file Kode_Google_Apps_Script.gs. Simpan.
+3. Pilih Deploy > New deployment > Web app. Execute as: Me. Who has access: Anyone. Izinkan akses jika diminta.
+4. Salin Web app URL yang berakhiran /exec.
+5. Buka file config.js di folder game menggunakan Notepad, isi URL pada window.SIPARI_REKAP_URL = 'URL_ANDA'; lalu simpan.
+6. Uji dengan satu nama panggilan siswa percobaan: selesaikan 4 misi, buka Rekap, klik Kirim Nilai ke Guru. Tunggu pesan konfirmasi.
+7. Cek tab 'Rekap Si Pari' pada spreadsheet guru. Pastikan nama dan skor masuk.
+8. Setelah berhasil, unggah seluruh folder game ke layanan hosting statis HTTPS (misalnya GitHub Pages atau Netlify) dan bagikan link game kepada siswa. Jangan bagikan file ZIP untuk HP.
+9. Siswa dapat menggunakan HP masing-masing atau laptop sekolah. Pada laptop bersama, setiap siswa wajib klik Mulai Permainan Baru agar identitas dan skor sebelumnya terhapus.
+10. Jangan bagikan URL Apps Script sebagai link game; jangan bagikan spreadsheet rekap kepada siswa.
+
+CATATAN PENTING
+- Belum ada URL Apps Script dalam file config.js. Pengiriman nilai baru aktif setelah guru memasang URL miliknya.
+- Perlu internet untuk mengirim nilai, tetapi game dapat dimainkan offline bila file game sudah tersimpan.
+- Gunakan nama panggilan/nama depan saja, tanpa NISN, alamat, nomor telepon, atau informasi sensitif.
+- Sistem rekap ini praktis untuk kegiatan kelas, bukan sistem ujian anti-kecurangan. Siswa yang memahami JavaScript bisa mengubah skor di perangkatnya.
+- Jika Google Apps Script di-deploy ulang, periksa apakah URL /exec berubah dan perbarui config.js jika perlu.
+- Pengiriman ulang token yang sama tidak menggandakan baris.

@@ -1,0 +1,48 @@
+PANDUAN MENJADIKAN MISI SI PARI BISA DIMAINKAN DI HP + REKAP GURU
+
+A. HUBUNGKAN NILAI KE GOOGLE SHEETS (akun Google milik guru)
+1. Masuk ke https://sheets.google.com memakai akun Google guru.
+2. Buat spreadsheet baru: REKAP NILAI MISI SI PARI.
+3. Klik Ekstensi > Apps Script.
+4. Hapus kode contoh, buka file Kode_Google_Apps_Script.gs dari paket ini, salin SEMUA isinya ke editor Apps Script, lalu Simpan.
+5. Klik Deploy > New deployment > ikon roda gigi > Web app.
+6. Description: Rekap Si Pari. Execute as: Me. Who has access: Anyone (jika diizinkan kebijakan akun sekolah). Klik Deploy, lalu Izinkan akses saat diminta.
+7. Salin URL Web App yang berakhir /exec. JANGAN bagikan URL spreadsheet ke siswa.
+8. Buka config.js dengan Notepad. Ganti baris window.SIPARI_REKAP_URL = ''; menjadi window.SIPARI_REKAP_URL = 'URL_WEB_APP_ANDA';. Simpan. URL harus dalam tanda petik satu.
+
+B. JADIKAN GAME SEBUAH LINK HTTPS UNTUK HP SISWA
+1. Buka https://app.netlify.com/drop (gunakan akun guru). Netlify Drop memungkinkan mengunggah folder situs statis.
+2. Seret FOLDER Misi_Si_Pari_Siap_HP_dan_Rekap_Guru (bukan file ZIP) ke area unggah. Pastikan index.html, config.js, assets/, dan suara/ berada langsung di dalam folder tersebut.
+3. Tunggu proses unggah selesai. Salin tautan HTTPS hasil publikasi (misalnya https://nama-situs.netlify.app).
+4. Buka tautan di HP guru untuk menguji. Jika game tidak memuat, periksa apakah index.html berada di folder utama yang diunggah.
+5. Bagikan tautan game melalui grup kelas atau kode QR. Siswa tidak perlu mengunduh ZIP.
+
+C. UJI SEBELUM DIBAGIKAN
+1. Buka link game di HP. Tekan Mulai Permainan Baru, masukkan NAMA CONTOH (bukan nama siswa asli).
+2. Selesaikan keempat misi. Pada hasil akhir, tekan Kirim Nilai ke Guru.
+3. Tunggu pesan 'Nilai berhasil tercatat di Google Sheets guru!'.
+4. Buka Google Sheets guru; periksa tab Rekap Si Pari berisi baris percobaan.
+5. Bila berhasil, hapus baris uji dari spreadsheet, lalu mulai menggunakan game untuk siswa.
+6. Jika gagal: pastikan URL di config.js berakhir /exec, deployment Web app terbaru, izin Anyone tersedia, game di-hosting via HTTPS, serta internet aktif.
+
+D. SISWA MEMAINKAN GAME
+1. Buka tautan game dari HP dengan Chrome/Safari/Edge dan sambungkan internet.
+2. Pilih Mulai Permainan Baru; isi nama yang disepakati guru (sebaiknya nama depan atau kode siswa, tanpa alamat/nomor telepon).
+3. Selesaikan 4 misi, masing-masing 5 soal dan 60 detik per soal.
+4. Pada halaman rekap akhir, tekan Kirim Nilai ke Guru dan TUNGGU konfirmasi berhasil.
+5. Jika belum berhasil, jangan tutup halaman; periksa koneksi dan tekan kirim ulang.
+
+E. LAPTOP SEKOLAH BERGANTIAN
+1. Setiap siswa membuka tautan game di laptop sekolah.
+2. Siswa pertama selesai dan mengirim nilai hingga muncul konfirmasi.
+3. Siswa berikutnya tekan Mulai Permainan Baru (menghapus identitas/progres lokal sebelumnya).
+4. Jangan gunakan tombol Lanjutkan Permainan milik siswa sebelumnya.
+
+CATATAN
+- Tanpa langkah A dan B, paket ZIP BELUM otomatis terkoneksi dengan akun guru dan BELUM dapat dimainkan via tautan umum.
+- Game dan aset merupakan file statis; tautan Netlify dapat dibuka banyak siswa, tetapi performa bergantung internet/perangkat.
+- Penyimpanan di browser hanya berlaku pada perangkat/browser tersebut.
+- Google Sheets milik guru jangan disetel sebagai publik; hanya Web app penerima nilai yang membutuhkan akses kirim.
+- Apps Script Web app publik menerima kiriman dari siapa pun yang mengetahui alamat endpoint. Rekap ini cocok untuk aktivitas pembelajaran, BUKAN ujian dengan verifikasi identitas atau anti-kecurangan.
+- Jika akun sekolah melarang akses Web app Anyone, gunakan akun yang mengizinkan sesuai kebijakan sekolah atau minta bantuan admin.
+- Bila mengubah kode Apps Script, deploy versi baru agar perubahan aktif.

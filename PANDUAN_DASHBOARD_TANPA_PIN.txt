@@ -1,0 +1,17 @@
+MISI SI PARI V12 - DASHBOARD DALAM GAME TANPA PIN (HANYA-BACA)
+
+1. Buka Google Sheets milik guru > Ekstensi > Apps Script.
+2. Ganti kode Code.gs dengan isi Kode_Google_Apps_Script.gs dari ZIP ini.
+   Jika sebelumnya memakai fungsi atau fitur lain, simpan cadangan terlebih dahulu.
+3. Simpan. Deploy > Manage deployments > pilih deployment URL yang dipakai config.js > Edit > New version > Deploy.
+4. Pastikan Web App dijalankan sebagai guru (Execute as: Me) dan akses Anyone agar siswa bisa mengirim nilai dan membaca rekap.
+5. Jangan berikan izin Editor atau tautan edit Google Sheets kepada siswa.
+6. Unggah ulang seluruh isi folder game ke hosting, menggantikan versi sebelumnya.
+7. Buka game > Dashboard Guru > Perbarui Rekap. Uji pengiriman nilai dengan satu akun siswa.
+
+CATATAN KEAMANAN:
+Dashboard dapat dibaca oleh siapa pun yang memiliki tautan game. Gunakan nama panggilan.
+Dashboard hanya menampilkan nama, waktu dan nilai; token dan refleksi tidak ditampilkan.
+API pengiriman nilai siswa tetap terbuka sebagaimana versi sebelumnya; skor dari klien tidak dapat dianggap tahan manipulasi.
+Dashboard tidak menyediakan fungsi edit atau hapus. Hanya akun yang diberi izin Editor di Google Sheets dapat mengubah nilai langsung di Sheets.
+Jika ada beberapa deployment aktif, pastikan URL dalam config.js menunjuk ke deployment yang diperbarui.

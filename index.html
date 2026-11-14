@@ -1,0 +1,424 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Misi Si Pari — Harmoni Ekosistem</title><style>
+:root{font-family:'Trebuchet MS',system-ui,sans-serif;color:#2c431b}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#88c75e url('assets/Background 2.png') center/cover fixed}body:before{content:'';position:fixed;inset:0;background:linear-gradient(#fff6 0%,#15530c30 100%);pointer-events:none}main{position:relative;max-width:1220px;min-height:100vh;margin:auto;padding:55px 16px 22px;display:flex;align-items:center;justify-content:center}.screen{display:none;width:100%}.screen.active{display:block}.panel{max-width:1080px;margin:0 auto;background:#fff9e9ef;border:6px solid #a87532;border-radius:30px;padding:24px;box-shadow:0 9px #70441d,0 20px 38px #203b2044}.hero{display:flex;gap:25px;align-items:center;justify-content:center}.hero img{width:min(30vw,300px);max-height:390px;object-fit:contain;filter:drop-shadow(0 10px 5px #284b3455);animation:bob 3s infinite ease-in-out}@keyframes bob{50%{transform:translateY(-12px)}}h1{font-size:clamp(2rem,5vw,4rem);color:#257b3a;text-shadow:2px 3px #f8d67e;margin:5px 0}h2{margin:10px 0;color:#367b31}h3{margin:8px 0}p{line-height:1.45}.btn{border:3px solid #52822a;background:linear-gradient(#c5ff74,#5bbd39);border-radius:16px;color:#24471c;font-weight:900;font-size:1.02rem;padding:11px 18px;cursor:pointer;box-shadow:0 4px #34731e;margin:4px;touch-action:manipulation}.btn.alt{background:linear-gradient(#ffe5a1,#f3ae45);border-color:#a87332;box-shadow:0 4px #98612d}.btn:disabled{opacity:.45;cursor:not-allowed}.btn:hover:not(:disabled){filter:brightness(1.05)}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.center{text-align:center}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.mission{background:#fff1cb;border:3px solid #bd873e;border-radius:19px;padding:15px}.mission img{width:72px;height:72px;object-fit:contain;float:right}.chip{display:inline-block;background:#fff2cc;border:3px solid #b37a32;border-radius:40px;padding:7px 12px;font-weight:900}.topbar{display:flex;gap:8px;justify-content:space-between;align-items:center;flex-wrap:wrap}.progress{height:15px;border-radius:20px;border:2px solid #ae8539;background:#e5d3a1;overflow:hidden;margin:12px 0}.fill{width:100%;height:100%;background:linear-gradient(90deg,#53c446,#e6dc3b);transition:width .3s}.objects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px 0}.obj,.tile{border:3px solid #bd9047;background:#fff6d8;border-radius:17px;padding:9px;cursor:pointer;font-weight:900;font-size:1rem;min-width:0;touch-action:manipulation}.obj img,.tile img{width:85px;height:80px;max-width:100%;object-fit:contain;display:block;margin:auto}.obj.selected,.tile.selected{background:#d9ffbc;border-color:#3d9d39}.obj:disabled{cursor:default}.feedback{font-weight:900;min-height:38px}.ok{color:#19863a}.bad{color:#b94729}input{border:3px solid #a47734;border-radius:13px;padding:12px;font-size:1.1rem;max-width:100%}.small{font-size:.9rem;color:#566345}.toolbar{position:fixed;z-index:10;top:8px;right:8px;display:flex;gap:5px}.toolbar button{border:2px solid #a77731;border-radius:15px;background:#fff7dd;padding:7px 10px;font-weight:bold;cursor:pointer}.slots{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:15px 0}.slot{min-width:105px;min-height:128px;flex:1;max-width:175px;border:3px dashed #b98a43;background:#fff5d8;border-radius:15px;display:flex;align-items:center;justify-content:center;flex-direction:column;cursor:pointer}.slot img{height:72px;max-width:95%;object-fit:contain}.slot.target{border-color:#3c9e40;background:#e0fbc9}.choices{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}.tile{width:120px;min-height:115px}.webnodes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}.webnodes .tile{width:100%;max-width:160px;margin:auto}.links{min-height:50px;padding:9px;border-radius:12px;background:#e3f4d7;font-weight:bold}.runner{height:310px;position:relative;overflow:hidden;border:4px solid #8c632d;border-radius:20px;background:linear-gradient(#7fdaff88,#b2ef9a55),url('assets/Background 7.png') center/cover}.runner:after{content:'';position:absolute;bottom:0;height:42px;width:100%;background:repeating-linear-gradient(90deg,#91672d 0 80px,#a97832 80px 160px);border-top:6px solid #5ca832}.runnerMascot{position:absolute;bottom:34px;left:12%;height:140px;max-width:28%;object-fit:contain;z-index:2;transition:bottom .25s;filter:drop-shadow(0 4px 4px #263e3255)}.runnerMascot.jump{bottom:135px}.runnerChoice{position:absolute;bottom:52px;width:110px;padding:5px;background:#fff8db;border:3px solid #b47c35;border-radius:15px;text-align:center;cursor:pointer;z-index:3;animation:slide 4.5s linear infinite}.runnerChoice img{height:75px;width:90px;max-width:100%;object-fit:contain}@keyframes slide{from{right:-125px}to{right:105%}}.hearts{color:#d83443;font-size:1.5rem}.resultbig{font-size:3.5rem;font-weight:900;color:#247e36}.help{background:#e8f7da;padding:10px;border-radius:13px}.hidden{display:none!important}@media(max-width:700px){main{padding:60px 9px 18px}.panel{padding:12px;border-width:4px}.hero{flex-direction:column;text-align:center;gap:3px}.hero img{height:180px;width:180px}.grid{grid-template-columns:1fr}.objects{gap:5px}.obj img{height:55px}.obj{font-size:.82rem}.slot{min-width:65px;min-height:95px}.slot img{height:48px}.tile{width:90px;font-size:.8rem}.tile img{height:60px;width:65px}.runner{height:260px}.runnerMascot{height:110px}.runnerChoice{width:90px}.runnerChoice img{height:55px}.webnodes{gap:4px}.webnodes .tile{padding:4px}}
+
+/* Navigasi selalu terlihat */
+.toolbar{left:8px;right:8px;justify-content:flex-end;flex-wrap:wrap;pointer-events:none}
+.toolbar button{pointer-events:auto;box-shadow:0 3px 0 #98702e;transition:transform .16s,filter .16s}
+.toolbar button:hover{transform:translateY(-2px) scale(1.045);filter:brightness(1.08)}
+.toolbar .navIcon{background:linear-gradient(#ffefae,#ffcb63);border:2px solid #aa7428}
+.btn{transition:transform .16s,filter .16s,box-shadow .16s}
+.btn:hover:not(:disabled){transform:translateY(-3px) scale(1.035);box-shadow:0 7px #34731e}
+.btn:active:not(:disabled){transform:scale(.95)}
+.screen.active .panel{animation:panelEnter .42s ease both}
+@keyframes panelEnter{from{opacity:0;transform:translateY(22px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.mission{transition:transform .22s,box-shadow .22s}.mission:hover{transform:translateY(-4px);box-shadow:0 7px 16px #4d6e3533}
+.obj,.tile{transition:transform .18s,background .18s}.obj:hover:not(:disabled),.tile:hover:not(:disabled){transform:scale(1.04)}
+.obj.selected,.tile.selected{animation:popSelect .28s ease}@keyframes popSelect{50%{transform:scale(1.09)}}
+.feedback.ok{animation:winPop .55s ease}.feedback.bad{animation:shake .35s ease}
+@keyframes winPop{50%{transform:scale(1.06)}}@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.runner{height:330px;background-position:center;isolation:isolate}
+.runner:before{content:'☁️  ☁️';position:absolute;top:8px;left:-10%;font-size:24px;opacity:.7;white-space:pre;animation:cloudMove 18s linear infinite;pointer-events:none}
+@keyframes cloudMove{to{left:100%}}
+.runner:after{background:repeating-linear-gradient(90deg,#91672d 0 80px,#a97832 80px 160px);background-size:160px 100%;animation:groundScroll 2.4s linear infinite}
+@keyframes groundScroll{to{background-position:-160px 0}}
+.runnerMascot{height:112px;bottom:34px;left:12%;z-index:4;transition:left .18s linear,bottom .2s ease;animation:runBounce .42s ease-in-out infinite}
+@keyframes runBounce{50%{transform:translateY(-5px)}}
+.runnerMascot.jump{bottom:78px;animation:jumpPulse .72s ease-in-out}
+@keyframes jumpPulse{50%{transform:rotate(-6deg) scale(1.08)}}
+.runnerChoice{width:72px;min-height:75px;bottom:56px;padding:3px 3px 5px;font-size:.74rem;line-height:1.05;border-radius:13px;border-width:2px;animation:runnerPass 3.65s linear forwards;z-index:3;box-shadow:0 4px 9px #283c2344}
+.runnerChoice img{height:42px;width:56px;display:block;margin:auto;object-fit:contain}
+@keyframes runnerPass{from{left:calc(100% + 10px)}to{left:-95px}}
+.runnerChoice.collected{animation:collectSpark .32s ease forwards!important;pointer-events:none}
+@keyframes collectSpark{to{opacity:0;transform:scale(1.6) translateY(-25px)}}
+.runnerSparkle{position:absolute;top:22px;right:30px;font-size:24px;animation:twinkle 1.4s ease-in-out infinite;pointer-events:none}
+@keyframes twinkle{50%{opacity:.25;transform:rotate(20deg) scale(.7)}}
+.runnerControls .btn{min-width:105px;touch-action:manipulation}
+#timebar{transition:width .5s linear}
+@media(max-width:700px){.toolbar button{font-size:.76rem;padding:6px}.toolbar .navIcon span{display:none}.runner{height:275px}.runnerMascot{height:92px}.runnerMascot.jump{bottom:75px}.runnerChoice{width:62px;min-height:67px;font-size:.68rem}.runnerChoice img{height:36px;width:49px}.runnerControls .btn{min-width:76px;font-size:.83rem;padding:10px 8px}}
+@media(prefers-reduced-motion:reduce){.runner:before,.runner:after,.runnerSparkle{animation:none}}
+
+/* Versi 3: runner lebih cepat, jaring makanan dengan garis nyata */
+.runnerChoice{animation-duration:3.65s!important;width:67px;min-height:70px;box-shadow:0 3px 7px #2344}
+.runnerChoice img{height:39px;width:51px}
+.runnerChoice:nth-of-type(3n){bottom:65px}
+.webStage{position:relative;background:linear-gradient(145deg,#d9f4ca,#f6ffe9);border:3px solid #a6c783;border-radius:18px;padding:16px 10px;overflow:hidden;min-height:240px}
+.webStage .webnodes{position:relative;z-index:2;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 26px;margin:0}
+.webTile{position:relative;z-index:2;background:#fffbe8f2!important;border:3px solid #9eae59!important;box-shadow:0 4px 0 #7d9c60;transition:transform .15s}
+.webTile:hover{transform:translateY(-3px)}
+.webTile.selected{border-color:#ef9e2e!important;background:#fff0ba!important;box-shadow:0 0 0 4px #ffd76499}
+.webArrows{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none;overflow:visible}
+.webStatus{font-weight:800;min-height:28px;color:#2d6c3c}
+.webLinkChip{display:inline-block;border:2px solid #78b16c;background:#fff;border-radius:18px;padding:8px 11px;margin:4px;cursor:pointer;font-weight:700;color:#285b35}
+.webLinkChip:disabled{opacity:.7}
+@media(max-width:700px){.webStage{padding:10px 5px}.webStage .webnodes{gap:22px 10px}.webTile img{height:52px!important;width:60px!important}.webTile{font-size:.76rem}.runnerChoice{width:60px}.runnerChoice img{width:44px;height:35px}}
+
+/* V5: Buku petunjuk ilustratif dan peta petualangan interaktif */
+.guidePanel,.adventurePanel{max-width:1130px;background:linear-gradient(145deg,#fff9e9f7,#f4ffdef5);overflow:hidden}
+.guideBanner{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 24px;border-radius:24px;background:linear-gradient(115deg,#a6e7a2,#e6f8a9 72%,#fce2a0);border:3px solid #79ad54;box-shadow:0 6px 0 #6f9b43}
+.guideBanner h1,.adventureHeader h1{font-size:clamp(1.5rem,3.7vw,2.7rem);margin:4px 0;color:#26783d}.guideBanner p{font-weight:700;max-width:600px}.guideBanner img{width:150px;height:160px;object-fit:contain;animation:bob 3s ease-in-out infinite}.guideEyebrow{font-size:.75rem;letter-spacing:.15em;font-weight:900;color:#7b5723}
+.guideStats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:21px 0}.guideStats>div{background:#fff;border:2px solid #c4d69d;border-radius:17px;text-align:center;padding:13px 6px;box-shadow:0 4px 0 #bfd8a2}.guideStats b{display:block;font-size:1.1rem;color:#377b3a}.guideStats span{font-size:.82rem;color:#63754c}.guideSubhead{margin:18px 0 12px}.guideCards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.guideCards article{position:relative;min-width:0;background:linear-gradient(#fffdf3,#f2f9dc);border:3px solid #c9a36a;border-radius:19px;padding:16px 12px 12px;text-align:center;box-shadow:0 5px #a7834c;transition:transform .2s}.guideCards article:hover{transform:translateY(-5px)}.guideCards img{width:96px;height:85px;object-fit:contain;filter:drop-shadow(0 4px 4px #47603444)}.guideCards h3{font-size:1rem;color:#39763a}.guideCards p{font-size:.87rem;margin:7px 0;line-height:1.5}.guideNumber{position:absolute;top:7px;left:8px;background:#4a9b50;color:white;border-radius:50%;padding:7px;font-weight:900;font-size:.8rem}.guideRules{display:flex;align-items:center;gap:14px;background:#e5f6d1;border:2px dashed #88ba63;border-radius:17px;margin:21px 0 10px;padding:12px 16px}.guideRules>span{font-size:2rem}.guideRules p{margin:3px 0;font-size:.9rem}.guideActions{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:17px}
+.adventureHeader{display:flex;align-items:center;justify-content:space-between;gap:10px}.adventureHeader p{margin:5px 0 13px}.adventureHeader h2{font-size:1.15rem;margin:3px 0}.mapProgress{background:#fff7d3;border:3px solid #bf984e;border-radius:20px;padding:12px;text-align:center;min-width:110px;box-shadow:0 4px #af813d}.mapProgress b{display:block;font-size:1.6rem;color:#338b43}.mapProgress span{font-size:.76rem}
+.adventureMap{position:relative;width:100%;aspect-ratio:1000/620;min-height:390px;max-height:660px;overflow:hidden;border-radius:24px;border:5px solid #a87839;box-shadow:inset 0 0 0 3px #e7c47b,0 8px 0 #75501d;background:linear-gradient(#8cd6f1 0%,#b8eaf5 19%,#9bd66d 20%,#5bb14e 100%);isolation:isolate}
+.adventureMap:before{content:'';position:absolute;inset:0;background:url('assets/Background 8.png') center/cover;opacity:.7;z-index:-1}.adventureMap:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,#a9e16e22);pointer-events:none}.mapSkyDecor{position:absolute;top:4%;left:8%;font-size:clamp(16px,3vw,36px);opacity:.9;animation:bob 5s infinite}.mapSkyDecor span{margin-left:160px}.mapRoad{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}.mapRoad path{fill:none;stroke-linecap:round;stroke-linejoin:round}.roadShadow{stroke:#63461d;stroke-width:64;opacity:.6}.roadBase{stroke:#d8ae69;stroke-width:52}.roadDashes{stroke:#fff2bb;stroke-width:3;stroke-dasharray:10 22;opacity:.9}.mapSceneDecor{position:absolute;font-size:clamp(22px,4vw,47px);filter:drop-shadow(1px 3px 2px #2d6b3655);pointer-events:none}.d1{left:5%;top:47%}.d2{left:48%;top:7%}.d3{left:57%;top:72%}.d4{left:17%;top:12%}.d5{right:4%;bottom:5%}
+.mapStop{position:absolute;transform:translate(-50%,-50%);width:clamp(110px,18vw,190px);padding:8px 7px 9px;text-align:center;border:3px solid #9b672d;border-radius:18px;background:linear-gradient(#fff8d7,#f4db9c);box-shadow:0 6px 0 #865521,0 8px 14px #29432166;cursor:pointer;z-index:3;transition:transform .2s,filter .2s;touch-action:manipulation}.mapStop:hover:not(:disabled),.mapStop:focus-visible{transform:translate(-50%,-55%) scale(1.045)}.mapStop:disabled{cursor:not-allowed;filter:grayscale(.65);opacity:.88}.mapStop.complete{border-color:#2b9146;background:linear-gradient(#f3ffce,#bdeca4)}.mapStop.current{outline:4px solid #fff9a8;outline-offset:3px;animation:mapPulse 2s infinite}.mapStop img{height:clamp(34px,6vw,70px);max-width:100%;object-fit:contain;display:block;margin:0 auto}.mapStop .stopTitle{display:block;font-size:clamp(.7rem,1.35vw,1rem);line-height:1.15;color:#39552a}.mapStop .stopMeta{display:block;font-size:clamp(.62rem,1vw,.78rem);color:#4c683b;margin-top:3px}.mapStop .stopBadge{position:absolute;right:-9px;top:-12px;background:#fff;color:#427f3b;border:2px solid #b98b42;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;font-size:1rem}.mapStop .stopNumber{position:absolute;left:-11px;top:-13px;background:#438b3f;color:white;border:2px solid #fff;border-radius:50%;width:30px;height:30px;display:grid;place-items:center;font-weight:900}
+#mapPari{position:absolute;width:clamp(55px,9vw,105px);height:clamp(75px,12vw,145px);object-fit:contain;z-index:5;pointer-events:none;filter:drop-shadow(0 8px 3px #254a2844);transform:translate(-50%,-90%);transition:left 1.5s cubic-bezier(.3,.75,.3,1),top 1.5s cubic-bezier(.3,.75,.3,1);animation:mapPariBounce .6s infinite alternate ease-in-out}#mapPari.traveling{animation:mapPariBounce .22s infinite alternate ease-in-out}.mapTravelNotice{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:#fffce4ee;border:2px solid #b58c47;border-radius:20px;padding:7px 14px;font-weight:900;z-index:7;text-align:center;max-width:90%;font-size:.9rem}.mapTravelNotice:empty{display:none}.mapLegend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;font-size:.84rem;font-weight:800;color:#48663b}
+@keyframes mapPulse{50%{outline-color:#fff3a844}}@keyframes mapPariBounce{to{transform:translate(-50%,-95%) rotate(3deg)}}
+@media(max-width:740px){.guideBanner{padding:10px}.guideBanner img{width:85px;height:115px}.guideCards{grid-template-columns:repeat(2,minmax(0,1fr))}.guideCards article{padding:12px 7px}.guideCards img{width:72px;height:62px}.guideStats{gap:5px}.guideStats b{font-size:.84rem}.guideStats span{font-size:.67rem}.adventureMap{min-height:450px;aspect-ratio:3/4}.mapStop{width:clamp(105px,30vw,155px)}.mapStop img{height:50px}.mapStop .stopTitle{font-size:.75rem}.mapStop .stopMeta{font-size:.66rem}.mapSceneDecor{font-size:22px}.mapSkyDecor span{margin-left:30px}.mapTravelNotice{font-size:.72rem}.adventureHeader h1{font-size:1.4rem}}
+@media(prefers-reduced-motion:reduce){#mapPari,.mapStop.current,.guideBanner img{animation:none!important;transition:none!important}}
+
+/* V6: start/continue controls and mascot feedback */
+.homeActions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.homeActions .btn{flex:1;min-width:195px}.savedProgress{background:#e9f9df;border:2px solid #85b85b;border-radius:14px;padding:9px 13px;margin:12px 0;font-weight:bold}.feedbackCard{margin:16px auto;padding:16px 20px;border-radius:24px;border:4px solid #70a53b;background:linear-gradient(140deg,#f6ffdd,#fff8d9);box-shadow:0 8px 20px #28562d33;max-width:650px;text-align:center;animation:feedbackAppear .45s ease both}.feedbackCard.wrong{border-color:#e4a256;background:linear-gradient(140deg,#fff6d8,#ffe9da)}.feedbackCard img{height:clamp(135px,22vh,210px);max-width:100%;object-fit:contain;filter:drop-shadow(0 6px 6px #233c2333);animation:feedbackBob 1.7s ease-in-out infinite}.feedbackCard h3{font-size:clamp(1.2rem,3vw,1.75rem);margin:5px 0;color:#2b7b36}.feedbackCard.wrong h3{color:#a45c28}.feedbackCard p{margin:10px 0 0;background:#ffffffb8;border-radius:12px;padding:12px;font-size:1.05rem;font-weight:650;line-height:1.5}.feedbackCard .feedbackCaption{font-size:.9rem;color:#52683d}.feedbackCard.wrong .feedbackCaption{color:#98673b}@keyframes feedbackAppear{from{opacity:0;transform:scale(.85) translateY(15px)}to{opacity:1;transform:scale(1) translateY(0)}}@keyframes feedbackBob{50%{transform:translateY(-8px) rotate(2deg)}}
+
+.reportBox{max-width:690px;margin:18px auto;padding:17px;background:#e9f9e5;border:3px solid #80b55b;border-radius:20px;text-align:center}
+.reportBox h3{margin:4px 0 9px;color:#2c793b}.reportBox p{margin:8px 0}.reportBox .btn{max-width:100%;white-space:normal}
+.reportStatus{font-weight:800;line-height:1.45;overflow-wrap:anywhere}.reportStatus.success{color:#14783b}.reportStatus.error{color:#ae3d24}
+@media(max-width:700px){.reportBox{padding:12px}.reportBox .btn{width:100%;margin:5px 0}}
+
+/* V9 — Animasi aset: lembut, ramah HP, tanpa menggeser area sentuh. */
+@keyframes sipariSway {
+  0%,100% {transform:translateY(0) rotate(-2deg)}
+  50% {transform:translateY(-7px) rotate(2deg)}
+}
+@keyframes sipariFlutter {
+  0%,100% {transform:translateY(0) rotate(-4deg) scale(1)}
+  50% {transform:translateY(-8px) rotate(4deg) scale(1.04)}
+}
+@keyframes sipariGlow {
+  0%,100% {filter:drop-shadow(0 3px 3px #355b2440)}
+  50% {filter:drop-shadow(0 6px 9px #ffd64faa)}
+}
+@keyframes sipariSparkle {
+  0%,100% {opacity:.5;transform:translateY(0) scale(.85)}
+  50% {opacity:1;transform:translateY(-8px) scale(1.15)}
+}
+@keyframes sipariTap {
+  0% {transform:scale(1)}
+  50% {transform:scale(.91)}
+  100% {transform:scale(1)}
+}
+/* Animasi diterapkan ke gambar DI DALAM tombol, bukan kotak tabrakan/klik. */
+.guideCards article img,
+.mission img,
+.mapStop img,
+.obj:not(.selected) img,
+.tile:not(.selected):not(.webTile) img,
+.slot img {
+  animation:sipariSway 3.1s ease-in-out infinite;
+  transform-origin:center bottom;
+  will-change:transform;
+}
+.guideCards article:nth-child(even) img,
+.obj:nth-child(3n+2) img,
+.tile:nth-child(even) img {
+  animation-delay:-1.3s;
+}
+.obj:nth-child(3n) img,.guideCards article:nth-child(3n) img {
+  animation-duration:3.8s;
+}
+.webTile img {animation:sipariFlutter 3.6s ease-in-out infinite;transform-origin:center bottom}
+.webTile:nth-child(even) img {animation-delay:-1.8s}
+.mapStop.current img,.mapStop.done img {animation:sipariFlutter 2.2s ease-in-out infinite}
+.mapStop.current {animation:sipariGlow 2.4s ease-in-out infinite}
+.guideStats b,.mapProgress b {animation:sipariGlow 3.3s ease-in-out infinite}
+.mapSceneDecor,.mapSkyDecor {animation:sipariSway 5s ease-in-out infinite;pointer-events:none}
+.mapSceneDecor:nth-of-type(even) {animation-delay:-2s}
+.runnerSparkle {animation:sipariSparkle 1.6s ease-in-out infinite}
+.btn:active:not(:disabled),.toolbar button:active {animation:sipariTap .22s ease}
+.feedbackCard img {animation:feedbackBob 1.7s ease-in-out infinite}
+#result img,#final img {animation:sipariFlutter 2.6s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){
+  .guideCards article img,.mission img,.mapStop img,.obj img,.tile img,.slot img,
+  .mapStop.current,.guideStats b,.mapProgress b,.mapSceneDecor,.mapSkyDecor,
+  .runnerSparkle,#result img,#final img {animation:none!important}
+}
+
+
+
+.dashTableWrap{overflow:auto;max-height:55vh;border-radius:12px;border:1px solid #d6c59e}.dashTable{width:100%;border-collapse:collapse;background:#fff;font-size:14px}.dashTable th,.dashTable td{padding:10px;border-bottom:1px solid #e6e2d8;text-align:left;white-space:nowrap}.dashTable th{position:sticky;top:0;background:#e5f0d6;color:#244722}.dashSummary{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.dashSummary span{padding:12px;border-radius:12px;background:#edf5df}.dashControls{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}.dashControls input{padding:12px;border-radius:10px;border:1px solid #b8a77d;min-width:180px}
+</style></head><body><div class="toolbar"><button class="navIcon" onclick="goHome()" title="Beranda">🏠 <span>Home</span></button><button class="navIcon" onclick="restartCurrent()" title="Mulai ulang">🔄 <span>Mulai Ulang</span></button><button onclick="openPublicDashboard()">📊 Dashboard Guru</button><button onclick="toggleSound()" id="soundBtn">🔊 Suara ON</button><button onclick="toggleMusic()" id="musicBtn">🎵 Musik OFF</button></div><audio id="sipariMusic" src="suara/11.%20suara%20musik%20Misi%20Si%20Pari.mp3" preload="none" loop playsinline></audio><main>
+<section id="home" class="screen active"><div class="panel hero"><img src="assets/menyapa.png" alt="Si Pari menyapa"><div><span class="chip">IPAS Kelas 5 · Kurikulum Merdeka</span><h1>Misi Si Pari</h1><h2>Harmoni dalam Ekosistem</h2><p>Jelajahi persawahan bersama Si Pari! Temukan makhluk hidup, susun rantai makanan, berlari mencari jawaban, dan buat jaring-jaring makanan.</p><div id="savedProgress" class="savedProgress hidden" aria-live="polite"></div><div class="homeActions"><button class="btn" onclick="newGame()">🌱 Mulai Permainan Baru</button><button class="btn alt" id="continueBtn" onclick="continueGame()">▶ Lanjutkan Permainan</button></div></div></div></section>
+<section id="dashboard" class="screen"><div class="panel"><h1>📊 Dashboard Guru — Rekap Nilai</h1><p>Rekap dapat dilihat bersama. Data bersifat <b>hanya-baca</b>: tidak ada fitur mengedit atau menghapus.</p><div class="dashControls"><input id="dashSearch" placeholder="Cari nama siswa" oninput="renderPublicDashboard()"><button class="btn" onclick="loadPublicDashboard()">🔄 Perbarui Rekap</button><button class="btn alt" onclick="exportPublicDashboard()">⬇ Unduh CSV</button><button class="btn alt" onclick="go('home')">← Kembali</button></div><p id="dashStatus" role="status">Tekan Perbarui Rekap untuk mengambil nilai terbaru.</p><div id="dashSummary" class="dashSummary"></div><div class="dashTableWrap"><table class="dashTable"><thead><tr><th>Waktu</th><th>Nama siswa</th><th>Misi 1</th><th>Misi 2</th><th>Misi 3</th><th>Misi 4</th><th>Total / 100</th></tr></thead><tbody id="dashRows"></tbody></table></div><p class="small">Nama yang ditampilkan sebaiknya nama panggilan. Hak edit Google Sheets tetap hanya untuk guru.</p></div></section>
+<section id="guide" class="screen"><div class="panel guidePanel"><div class="guideBanner"><div><span class="guideEyebrow">BUKU PANDUAN PENJELAJAH</span><h1>🌿 Petunjuk Petualangan</h1><p>Siapkan diri, kenali tantangan, lalu jelajahi ekosistem sawah bersama Si Pari!</p></div><img src="assets/menunjuk-menjelaskan.png" alt="Si Pari menjelaskan permainan"></div><div class="guideStats"><div><b>⏱️ 60 DETIK</b><span>untuk setiap soal</span></div><div><b>🧩 5 SOAL</b><span>di setiap misi</span></div><div><b>⭐ 100 POIN</b><span>skor maksimal</span></div></div><h2 class="guideSubhead">🧭 Empat tantangan seru</h2><div class="guideCards"><article><span class="guideNumber">01</span><img src="assets/misi 1.png" alt="Misi 1"><h3>Detektif Ekosistem</h3><p><b>Klik</b> komponen biotik dan abiotik sesuai pertanyaan.</p></article><article><span class="guideNumber">02</span><img src="assets/misi 2.png" alt="Misi 2"><h3>Susun Rantai Makanan</h3><p><b>Seret dan letakkan</b> kartu organisme dalam urutan yang benar.</p></article><article><span class="guideNumber">03</span><img src="assets/misi-3.png" alt="Misi 3"><h3>Si Pari Berlari</h3><p>Gunakan <b>← →</b> untuk bergerak dan <b>Spasi</b> untuk melompat mengambil jawaban. Kartu yang dilewati tidak mengurangi nyawa.</p></article><article><span class="guideNumber">04</span><img src="assets/1001306878.png" alt="Misi 4"><h3>Jaring-jaring Makanan</h3><p><b>Hubungkan</b> dua organisme untuk membuat panah. Semua pilihan diterima dahulu; hasil dinilai setelah menekan Periksa Jawaban.</p></article></div><div class="guideRules"><span>💡</span><div><b>Aturan penting</b><p>Jawaban benar mendapat 5 poin. Jika salah atau waktu habis, kamu tetap memperoleh penjelasan. Selesaikan 5 soal untuk membuka pos petualangan berikutnya!</p></div></div><div class="guideActions"><button class="btn alt" onclick="go('home')">← Kembali</button><button class="btn" onclick="go('identity')">Siap Berpetualang! →</button></div></div></section>
+<section id="identity" class="screen"><div class="panel center"><img src="assets/menunjuk-menjelaskan.png" style="height:170px;max-width:100%;object-fit:contain" alt="Si Pari"><h1>Identitas Penjelajah</h1><p>Siapa nama penjelajah ekosistem hari ini?</p><input id="student" placeholder="Nama siswa" maxlength="45"><p id="nameError" class="bad"></p><p class="small">Nama dan skor disimpan sementara di perangkat ini. Setelah semua misi selesai, siswa dapat mengirim hasil ke Google Sheets guru.</p><button class="btn" onclick="saveStudent()">Buka Peta Misi →</button></div></section>
+<section id="map" class="screen"><div class="panel adventurePanel"><div class="adventureHeader"><div><span class="guideEyebrow">PETUALANGAN DI PERSAWAHAN</span><h1>🗺️ Peta Misi Si Pari</h1><h2 id="greeting"></h2><p>Ikuti jalan setapak bersama Si Pari. Selesaikan satu pos untuk membuka pos berikutnya!</p></div><div class="mapProgress"><b id="mapProgressCount">0 / 4</b><span>misi selesai</span></div></div><div id="adventureMap" class="adventureMap"><div class="mapSkyDecor">☀️ <span>☁️</span></div><svg class="mapRoad" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true"><path class="roadShadow" d="M 135 510 C 270 505 250 340 440 370 S 710 505 830 350 S 685 160 825 115"/><path class="roadBase" d="M 135 510 C 270 505 250 340 440 370 S 710 505 830 350 S 685 160 825 115"/><path class="roadDashes" d="M 135 510 C 270 505 250 340 440 370 S 710 505 830 350 S 685 160 825 115"/></svg><div class="mapSceneDecor d1">🌾🌾</div><div class="mapSceneDecor d2">🌳</div><div class="mapSceneDecor d3">🌾</div><div class="mapSceneDecor d4">🌻🌿</div><div class="mapSceneDecor d5">🌾🌾</div><div id="mapStops"></div><img id="mapPari" src="assets/berlari.png" alt="Si Pari berjalan di peta"/><div id="mapTravelNotice" class="mapTravelNotice" aria-live="polite"></div></div><div class="mapLegend"><span>🟢 Terbuka</span><span>🏅 Selesai</span><span>🔒 Belum terbuka</span><span>👆 Klik pos untuk bermain</span></div><div class="guideActions"><button class="btn alt" onclick="go('guide')">📜 Petunjuk</button><button class="btn" onclick="showFinal()">🏆 Rekap Skor</button></div></div></section>
+<section id="play" class="screen"><div class="panel"><div class="topbar"><span id="missionLabel" class="chip"></span><span id="questionNo" class="chip"></span><span id="time" class="chip">⏱️ 60 detik</span><span id="score" class="chip">⭐ 0</span></div><div class="progress"><div class="fill" id="timebar"></div></div><h2 id="question"></h2><p id="hint" class="small"></p><div id="playArea"></div><p id="feedback" class="feedback" aria-live="polite"></p><div id="mascotFeedback" class="feedbackCard hidden" role="status" aria-live="polite"><img id="feedbackMascot" src="assets/menang-berhasil.png" alt="Si Pari memberikan umpan balik"><h3 id="feedbackTitle"></h3><div id="feedbackCaption" class="feedbackCaption"></div><p id="feedbackExplanation"></p></div><div class="row"><button id="check" class="btn" onclick="checkAnswer()">✔ Periksa Jawaban</button><button id="next" class="btn hidden" onclick="nextQuestion()">Soal Berikutnya →</button><button class="btn alt" onclick="exitMission()">Keluar ke Peta</button></div></div></section>
+<section id="result" class="screen"><div class="panel center"><img src="assets/menang-berhasil.png" style="height:180px;max-width:100%;object-fit:contain" alt="Si Pari menang"><h1>🏆 Misi Selesai!</h1><h2 id="resultName"></h2><div id="resultScore" class="resultbig"></div><p id="resultMessage"></p><button class="btn" onclick="go('map')">🌾 Lanjut ke Peta Petualangan →</button><button class="btn alt" onclick="startMission(mission)">↻ Ulangi Misi</button></div></section>
+<section id="final" class="screen"><div class="panel center"><img src="assets/menang-berhasil.png" style="height:150px;max-width:100%;object-fit:contain" alt="Si Pari"><h1>🌟 Rekap Penjelajah Ekosistem</h1><h2 id="finalName"></h2><div id="finalBreakdown"></div><div id="finalScore" class="resultbig"></div><p id="finalMessage"></p><h3>Refleksi Pembelajaran</h3><p>Hal apa yang paling menarik dari ekosistem sawah?</p><textarea id="reflection" rows="3" style="width:min(100%,650px);padding:12px;border:3px solid #b48945;border-radius:14px;font:inherit" placeholder="Tuliskan pengalamanmu..."></textarea><div class="reportBox"><h3>📊 Kirim Nilai ke Guru</h3><p>Pastikan keempat misi sudah selesai. Tekan tombol berikut untuk mengirim nilai ke rekap guru melalui internet.</p><button class="btn" id="sendScoreBtn" onclick="sendScoreToTeacher()">📤 Kirim Nilai ke Guru</button><p class="reportStatus" id="reportStatus" role="status" aria-live="polite">Nilai belum dikirim.</p><p class="small">Gunakan nama panggilan atau nama depan saja. Jangan masukkan alamat atau nomor telepon.</p></div><div><button class="btn" onclick="downloadResult()">⬇ Simpan Hasil (.txt)</button><button class="btn alt" onclick="go('map')">← Kembali ke Peta</button></div></div></section>
+
+</main><iframe name="sipariSubmitFrame" id="sipariSubmitFrame" title="Pengiriman nilai" style="display:none"></iframe><script src="config.js"></script><script>
+'use strict';
+const $=id=>document.getElementById(id), A=n=>'assets/'+encodeURIComponent(n), IMG={Padi:'padi.png',Belalang:'belalang.png',Katak:'katak.png',Tikus:'tikus.png',Ular:'ular.png',Elang:'elang.png',Air:'air.png',Batu:'batu.png',Matahari:'matahari.png',Udara:'udara.png',Tanah:'tanah.jpeg',Jamur:'jamur.png',Cacing:'cacing.png'};
+const soundFiles={click:'01_klik_tombol.wav',correct:'02_jawaban_benar.wav',wrong:'03_jawaban_salah.wav',warning:'04_peringatan_10_detik.wav',timeout:'05_waktu_habis.wav',star:'06_ambil_bintang.wav',jump:'07_lompat.wav',drop:'08_drag_drop.wav',win:'09_misi_selesai.wav',open:'10_buka_misi.wav'};
+let soundOn=true,musicOn=false,musicCtx=null,musicTimer=null,student=localStorage.getItem('sipariName')||'',mission=1,index=0,points=0,seconds=60,timer=null,answered=false,selected=new Set(),placed=[],activeCard=null,webFirst=null,webLinks=[],hearts=3,runnerPos=12,jumpTimeout=null,runnerFrame=null,runnerHitCooldown=0,runnerSpawner=null,runnerSpawnCount=0,runnerLastSpawn=0,runnerQuestionToken=0;
+let scores=JSON.parse(localStorage.getItem('sipariScores')||'{}');
+function play(s){if(!soundOn)return;try{const a=new Audio('suara/'+soundFiles[s]);a.volume=.38;a.play().catch(()=>{});}catch(e){}}
+function toggleSound(){soundOn=!soundOn;$('soundBtn').textContent=soundOn?'🔊 Suara ON':'🔇 Suara OFF'}
+function toggleMusic(){
+  const audio=$('sipariMusic');
+  if(!audio){alert('File musik Si Pari tidak ditemukan.');return;}
+  if(musicOn){
+    audio.pause();musicOn=false;
+    $('musicBtn').textContent='🎵 Musik OFF';
+    $('musicBtn').setAttribute('aria-pressed','false');
+  }else{
+    audio.volume=.28;
+    audio.play().then(()=>{
+      musicOn=true;$('musicBtn').textContent='🎵 Musik ON';
+      $('musicBtn').setAttribute('aria-pressed','true');
+    }).catch(()=>{
+      musicOn=false;$('musicBtn').textContent='🎵 Musik OFF';
+      alert('Musik belum dapat diputar. Sentuh tombol Musik lagi.');
+    });
+  }
+}
+function refreshHome(){const has=!!student;const btn=$('continueBtn');btn.disabled=!has;const msg=$('savedProgress');msg.classList.toggle('hidden',!has);msg.textContent=has?'🌾 Progres tersimpan untuk '+student+' · '+completedCount()+' dari 4 misi selesai.':'Belum ada progres tersimpan.';}
+function newGame(){if(student||Object.keys(scores).length){if(!confirm('Mulai permainan baru? Identitas siswa, skor, dan progres lama akan dihapus dari perangkat ini.'))return;}stopTimer();scores={};student='';mission=1;index=0;points=0;pendingMapTravel=null;localStorage.removeItem('sipariName');localStorage.removeItem('sipariScores');localStorage.removeItem('sipariReportToken');$('student').value='';$('nameError').textContent='';$('reflection').value='';refreshHome();go('guide')}
+function continueGame(){if(!student){alert('Belum ada permainan tersimpan. Pilih Mulai Permainan Baru.');return;}go('map')}
+function goHome(){if($('play').classList.contains('active')&&!confirm('Kembali ke beranda? Progres soal saat ini tidak tersimpan.'))return;go('home')}
+function restartCurrent(){if($('play').classList.contains('active')){if(confirm('Mulai ulang Misi '+mission+' dari soal pertama?'))startMission(mission)}else if($('result').classList.contains('active')){startMission(mission)}else if($('final').classList.contains('active')){if(confirm('Hapus semua skor dan mulai dari awal?')){scores={};localStorage.removeItem('sipariScores');go('map')}}else{if(confirm('Kembali ke awal permainan?'))go('home')}}
+function go(id){stopTimer();document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');window.scrollTo(0,0);if(id==='map')drawMap();if(id==='home')refreshHome();play('click')}
+function saveStudent(){let v=$('student').value.trim();if(!v){$('nameError').textContent='Tuliskan nama terlebih dahulu.';return;}student=v;localStorage.setItem('sipariName',v);refreshHome();go('map')}
+const missionNames=['','Detektif Ekosistem','Susun Rantai Makanan','Si Pari Berlari','Jaring-jaring Makanan'];
+const missionImages=['','misi 1.png','misi 2.png','misi-3.png','1001306878.png'];
+const missionDescriptions=['','Klik komponen biotik dan abiotik.','Seret atau klik kartu untuk menyusun rantai makanan.','Bergerak dan kumpulkan jawaban yang benar.','Hubungkan organisme sesuai perpindahan energi.'];
+const mapStopsData=[null,{x:13.5,y:82},{x:44,y:59},{x:83,y:57},{x:82.5,y:19}];
+let pendingMapTravel=null,mapTravelTimer=null;
+function completedCount(){return [1,2,3,4].filter(m=>scores[m]!==undefined).length}
+function highestUnlocked(){let m=1;while(m<=4&&scores[m]!==undefined)m++;return Math.min(m,4)}
+function setMapPari(m){const el=$('mapPari'),pos=mapStopsData[Math.max(1,Math.min(4,m))];el.style.left=pos.x+'%';el.style.top=pos.y+'%'}
+function drawMap(){
+ $('greeting').textContent='Halo, '+(student||'Penjelajah')+'! 🌾';$('mapProgressCount').textContent=completedCount()+' / 4';
+ const root=$('mapStops');root.replaceChildren();const unlocked=highestUnlocked();
+ for(let m=1;m<=4;m++){
+  const done=scores[m]!==undefined,locked=m>unlocked,pos=mapStopsData[m];
+  const b=document.createElement('button');b.type='button';b.className='mapStop '+(done?'complete':locked?'locked':'current');
+  b.style.left=pos.x+'%';b.style.top=pos.y+'%';b.disabled=locked;
+  const num=document.createElement('span');num.className='stopNumber';num.textContent=m;b.append(num);
+  const badge=document.createElement('span');badge.className='stopBadge';badge.textContent=done?'🏅':locked?'🔒':'✨';b.append(badge);
+  const img=document.createElement('img');img.src=A(missionImages[m]);img.alt='';b.append(img);
+  const name=document.createElement('strong');name.className='stopTitle';name.textContent=missionNames[m];b.append(name);
+  const meta=document.createElement('span');meta.className='stopMeta';meta.textContent=done?'⭐ '+scores[m]+'/25 · Main lagi':locked?'Selesaikan Misi '+(m-1):'▶ Mainkan misi';b.append(meta);
+  b.setAttribute('aria-label','Misi '+m+': '+missionNames[m]+'. '+meta.textContent);
+  b.onclick=()=>{if(mapTravelTimer){clearTimeout(mapTravelTimer);mapTravelTimer=null}startMission(m)};root.append(b);
+ }
+ const notice=$('mapTravelNotice');notice.textContent='';
+ if(mapTravelTimer){clearTimeout(mapTravelTimer);mapTravelTimer=null}
+ const travel=pendingMapTravel;pendingMapTravel=null;
+ if(travel&&travel.from<4){
+  setMapPari(travel.from);$('mapPari').classList.add('traveling');notice.textContent='🌟 Hebat! Si Pari menuju Misi '+(travel.from+1)+'!';
+  requestAnimationFrame(()=>requestAnimationFrame(()=>setMapPari(travel.from+1)));
+  play('open');mapTravelTimer=setTimeout(()=>{$('mapPari').classList.remove('traveling');notice.textContent='🎉 Misi '+(travel.from+1)+' terbuka! Klik pos untuk bermain.';mapTravelTimer=null},1700);
+ }else{
+  setMapPari(unlocked);$('mapPari').classList.remove('traveling');
+  notice.textContent=completedCount()===4?'🏆 Seluruh misi selesai! Lihat rekap skormu.':'🌾 Si Pari siap di pos Misi '+unlocked;
+ }
+}
+const bank1=[{q:'Klik 3 komponen biotik di persawahan!',items:['Padi','Air','Belalang','Batu','Katak','Matahari'],answers:['Padi','Belalang','Katak'],exp:'Padi, belalang, dan katak adalah makhluk hidup (komponen biotik).'},{q:'Klik 3 komponen abiotik!',items:['Air','Padi','Matahari','Katak','Batu','Belalang'],answers:['Air','Matahari','Batu'],exp:'Air, cahaya matahari, dan batu adalah komponen tak hidup (abiotik).'},{q:'Temukan organisme produsen!',items:['Belalang','Padi','Katak','Ular','Elang','Tikus'],answers:['Padi'],exp:'Padi adalah produsen karena membuat makanan melalui fotosintesis.'},{q:'Pilih 2 organisme konsumen!',items:['Padi','Belalang','Matahari','Katak','Air','Batu'],answers:['Belalang','Katak'],exp:'Belalang dan katak memperoleh energi dengan memakan organisme lain.'},{q:'Klik sumber energi utama ekosistem sawah!',items:['Air','Batu','Matahari','Tikus','Padi','Ular'],answers:['Matahari'],exp:'Matahari menyediakan energi bagi produsen untuk melakukan fotosintesis.'}];
+const bank2=[{q:'Susun rantai makanan tiga organisme berikut!',cards:['Katak','Padi','Belalang'],answer:['Padi','Belalang','Katak'],exp:'Energi berpindah dari padi ke belalang lalu katak.'},{q:'Susun rantai makanan dari padi sampai elang!',cards:['Elang','Tikus','Padi','Ular'],answer:['Padi','Tikus','Ular','Elang'],exp:'Tikus memakan padi, ular memangsa tikus, dan elang memangsa ular.'},{q:'Lengkapi rantai makanan: Padi → ... → Katak → Ular.',cards:['Tikus','Belalang','Jamur'],answer:['Belalang'],exp:'Belalang memakan padi dan dapat dimangsa katak.'},{q:'Susun rantai makanan lengkap dari produsen!',cards:['Elang','Katak','Padi','Ular','Belalang'],answer:['Padi','Belalang','Katak','Ular','Elang'],exp:'Panah menunjukkan arah perpindahan energi dari yang dimakan ke pemakannya.'},{q:'Susun rantai makanan padi, tikus, dan elang!',cards:['Elang','Padi','Tikus'],answer:['Padi','Tikus','Elang'],exp:'Elang dapat memangsa tikus, sehingga energi berpindah dari padi ke tikus ke elang.'}];
+const bank3=[{q:'Siapa produsen dalam ekosistem sawah?',cards:['Padi','Belalang','Katak'],answer:'Padi',exp:'Padi menghasilkan makanan sendiri melalui fotosintesis.'},{q:'Hewan apa yang memakan padi dan dapat dimakan katak?',cards:['Tikus','Belalang','Ular'],answer:'Belalang',exp:'Belalang merupakan konsumen I yang dapat dimakan katak.'},{q:'Organisme apa yang menguraikan sisa makhluk hidup?',cards:['Jamur','Elang','Tikus'],answer:'Jamur',exp:'Jamur dapat berperan sebagai pengurai dalam ekosistem.'},{q:'Apa sumber energi untuk fotosintesis?',cards:['Batu','Matahari','Ular'],answer:'Matahari',exp:'Tumbuhan memanfaatkan energi cahaya matahari.'},{q:'Hewan apa yang dapat memangsa ular?',cards:['Belalang','Katak','Elang'],answer:'Elang',exp:'Elang dapat menjadi predator ular dalam rantai makanan sawah.'}];
+const bank4=[{q:'Hubungkan padi dengan dua organisme yang memakannya!',nodes:['Padi','Belalang','Tikus','Katak','Ular','Elang'],answer:[['Padi','Belalang'],['Padi','Tikus']],exp:'Belalang dan tikus dapat memakan tanaman padi.'},{q:'Hubungkan belalang dengan pemangsanya!',nodes:['Padi','Belalang','Katak','Tikus','Ular','Elang'],answer:[['Belalang','Katak']],exp:'Katak dapat memangsa belalang.'},{q:'Hubungkan tikus dan katak dengan pemangsanya!',nodes:['Tikus','Katak','Ular','Padi','Belalang','Elang'],answer:[['Tikus','Ular'],['Katak','Ular']],exp:'Ular dapat memangsa tikus maupun katak.'},{q:'Hubungkan ular dengan pemangsa tingkat atas!',nodes:['Ular','Elang','Padi','Belalang','Katak','Tikus'],answer:[['Ular','Elang']],exp:'Elang dapat memangsa ular.'},{q:'Jika jumlah ular menurun, tikus dapat bertambah. Hubungkan hubungan pemangsaan yang menjelaskannya!',nodes:['Tikus','Ular','Padi','Katak','Belalang','Elang'],answer:[['Tikus','Ular']],exp:'Ketika jumlah ular berkurang, tekanan pemangsaan terhadap tikus dapat menurun.'}];
+function qNow(){return [null,bank1,bank2,bank3,bank4][mission][index]}
+function startMission(m){if(m>highestUnlocked()){play('wrong');return;}mission=m;index=0;points=0;play('open');go('play');loadQuestion()}
+function stopTimer(){runnerQuestionToken++;if(runnerSpawner){clearInterval(runnerSpawner);runnerSpawner=null}if(runnerFrame!==null){cancelAnimationFrame(runnerFrame);runnerFrame=null}if(timer){clearInterval(timer);timer=null}if(jumpTimeout){clearTimeout(jumpTimeout);jumpTimeout=null}}
+function updateTime(){$('time').textContent='⏱️ '+seconds+' detik';$('timebar').style.width=(seconds/60*100)+'%';$('timebar').style.background=seconds<=10?'#ed5a42':'linear-gradient(90deg,#53c446,#e6dc3b)'}
+function loadQuestion(){stopTimer();seconds=60;answered=false;selected.clear();placed=[];activeCard=null;webFirst=null;webLinks=[];hearts=3;runnerPos=12;const q=qNow();$('missionLabel').textContent='Misi '+mission+' · '+missionNames[mission];$('questionNo').textContent='Soal '+(index+1)+'/5';$('score').textContent='⭐ '+points+' / 25';$('question').textContent=q.q;$('hint').textContent=['','Pilih semua objek yang diminta.','Seret kartu ke kotak atau klik kartu lalu klik kotak.','Tunggu kartu yang benar, lalu LOMPAT untuk mengambilnya. Kartu salah bisa dilewati tanpa kehilangan nyawa.','Klik organisme asal, lalu klik organisme pemakannya.'][mission];$('feedback').textContent='';$('feedback').className='feedback';$('mascotFeedback').classList.add('hidden');$('check').classList.toggle('hidden',mission===3);$('next').classList.add('hidden');$('next').textContent=index===4?'Lihat Hasil →':'Soal Berikutnya →';const area=$('playArea');area.replaceChildren();if(mission===1)renderM1(area,q);if(mission===2)renderM2(area,q);if(mission===3)renderM3(area,q);if(mission===4)renderM4(area,q);updateTime();timer=setInterval(()=>{seconds--;updateTime();if(seconds===10)play('warning');if(seconds<=0)finish(false,true)},1000)}
+function imgEl(name){const i=document.createElement('img');i.src=A(IMG[name]);i.alt=name;return i}
+function renderM1(area,q){const grid=document.createElement('div');grid.className='objects';q.items.forEach(name=>{const b=document.createElement('button');b.className='obj';b.append(imgEl(name),document.createTextNode(name));b.onclick=()=>{if(answered)return;if(selected.has(name)){selected.delete(name);b.classList.remove('selected')}else if(selected.size<q.answers.length){selected.add(name);b.classList.add('selected')}play('click')};grid.appendChild(b)});area.appendChild(grid)}
+function renderM2(area,q){const info=document.createElement('p');info.className='small';info.textContent='Urutan panah: organisme yang dimakan → organisme pemakan. Klik slot untuk menghapus kartu.';area.appendChild(info);const slots=document.createElement('div');slots.className='slots';const cards=document.createElement('div');cards.className='choices';function paint(){slots.replaceChildren();for(let j=0;j<q.answer.length;j++){const b=document.createElement('button');b.className='slot';b.dataset.slot=j;if(placed[j]){b.append(imgEl(placed[j]),document.createTextNode(placed[j]))}else b.textContent='Kotak '+(j+1);b.ondragover=e=>e.preventDefault();b.ondrop=e=>{e.preventDefault();put(e.dataTransfer.getData('text/plain'),j)};b.onclick=()=>{if(answered)return;if(activeCard){put(activeCard,j)}else if(placed[j]){placed[j]=null;paint()}};slots.appendChild(b)}cards.replaceChildren();q.cards.forEach(name=>{if(placed.includes(name))return;const b=document.createElement('button');b.className='tile'+(activeCard===name?' selected':'');b.draggable=true;b.append(imgEl(name),document.createTextNode(name));b.ondragstart=e=>e.dataTransfer.setData('text/plain',name);b.onclick=()=>{if(answered)return;activeCard=name;play('click');paint()};cards.appendChild(b)})}function put(name,j){if(answered||!q.cards.includes(name))return;let old=placed.indexOf(name);if(old>=0)placed[old]=null;placed[j]=name;activeCard=null;play('drop');paint()}area.append(slots,cards);paint()}
+function renderM3(area,q){
+ const controls=document.createElement('div');controls.className='row';controls.style.justifyContent='space-between';
+ controls.innerHTML='<span class="hearts" id="hearts">❤️❤️❤️</span><span class="small">Lompat untuk mengambil jawaban! Banyak kartu pengecoh bergerak cepat. Pilih waktu lompat yang tepat!</span>';
+ area.appendChild(controls);
+ const scene=document.createElement('div');scene.className='runner';
+ const mascot=document.createElement('img');mascot.src=A('berlari.png');mascot.className='runnerMascot';mascot.id='runnerMascot';scene.appendChild(mascot);
+ const sparkle=document.createElement('div');sparkle.className='runnerSparkle';sparkle.textContent='✨';scene.appendChild(sparkle);
+ area.appendChild(scene);
+ const nav=document.createElement('div');nav.className='row runnerControls';nav.style.justifyContent='center';
+ [['⬅ Kiri',()=>move(-5)],['⬆ LOMPAT',jump],['Kanan ➡',()=>move(5)]].forEach(([label,fn])=>{const b=document.createElement('button');b.className='btn alt';b.type='button';b.textContent=label;b.onclick=fn;nav.appendChild(b)});area.appendChild(nav);
+ const info=document.createElement('p');info.className='small center';info.textContent='💡 Kartu muncul lebih sering dan bergerak lebih cepat. Biarkan kartu pengecoh lewat, lalu lompat ketika jawaban benar mendekat!';area.appendChild(info);
+ let spawnNo=0;const token=runnerQuestionToken;
+ function spawnCard(){
+  if(answered||mission!==3||!$('play').classList.contains('active')||token!==runnerQuestionToken)return;
+  // One card at a time; correct answers return regularly, with varied decoys between them.
+  const choices=q.cards.filter(x=>x!==q.answer);
+  const name=spawnNo%5===3?q.answer:choices[(spawnNo+Math.floor(spawnNo/3))%choices.length];
+  spawnNo++;
+  const b=document.createElement('button');b.type='button';b.className='runnerChoice';b.dataset.answer=name;
+  b.append(imgEl(name),document.createTextNode(name));
+  b.setAttribute('aria-label','Ambil jawaban '+name);
+  b.onclick=()=>{if(!answered)collectRunnerCard(b,name)};
+  b.addEventListener('animationend',()=>b.remove(),{once:true});
+  scene.appendChild(b);
+  // Keep only a few visible cards, avoiding a wall of overlapping choices.
+  const cards=scene.querySelectorAll('.runnerChoice');if(cards.length>7)cards[0].remove();
+ }
+ runnerHitCooldown=performance.now()+1100;
+ // First card appears after a short thinking interval.
+ runnerSpawner=setInterval(spawnCard,1050);
+ setTimeout(()=>{if(token===runnerQuestionToken&&!answered)spawnCard()},1100);
+ function detectCollision(now){
+  if(answered||mission!==3||!$('play').classList.contains('active')||token!==runnerQuestionToken){runnerFrame=null;return}
+  // Intentional collection: only a jump can touch a passing card.
+  if(now>=runnerHitCooldown&&mascot.classList.contains('jump')){
+   const r=mascot.getBoundingClientRect();
+   const px1=r.left+r.width*.38,px2=r.right-r.width*.38;
+   const py1=r.top+r.height*.32,py2=r.bottom-r.height*.28;
+   for(const card of scene.querySelectorAll('.runnerChoice')){
+    if(card.dataset.collected==='1')continue;
+    const c=card.getBoundingClientRect();
+    const cx1=c.left+c.width*.17,cx2=c.right-c.width*.17;
+    const cy1=c.top+c.height*.10,cy2=c.bottom-c.height*.10;
+    if(px1<cx2&&px2>cx1&&py1<cy2&&py2>cy1){collectRunnerCard(card,card.dataset.answer);break}
+   }
+  }
+  if(!answered)runnerFrame=requestAnimationFrame(detectCollision);else runnerFrame=null;
+ }
+ runnerFrame=requestAnimationFrame(detectCollision);
+}
+function collectRunnerCard(card,name){
+ if(answered||card.dataset.collected==='1')return;
+ card.dataset.collected='1';card.classList.add('collected');
+ runnerHitCooldown=performance.now()+850;
+ const q=qNow();
+ if(name===q.answer){play('star');finish(true,false)}
+ else{
+  hearts--;play('wrong');$('hearts').textContent='❤️'.repeat(hearts)+'🤍'.repeat(3-hearts);
+  $('feedback').className='feedback bad';
+  $('feedback').textContent='Belum tepat. Tunggu kartu jawaban yang benar dan lompat saat mendekat!';
+  if(hearts<=0)finish(false,false)
+ }
+}
+function move(dx){
+ if(mission!==3||answered||!$('play').classList.contains('active'))return;
+ const m=$('runnerMascot');if(!m)return;
+ runnerPos=Math.max(2,Math.min(75,runnerPos+dx));m.style.left=runnerPos+'%';
+}
+function jump(){
+ if(mission!==3||answered||!$('play').classList.contains('active'))return;
+ const m=$('runnerMascot');if(!m||m.classList.contains('jump'))return;
+ m.src=A('melompat.png');m.classList.add('jump');play('jump');clearTimeout(jumpTimeout);
+ jumpTimeout=setTimeout(()=>{if(m.isConnected){m.classList.remove('jump');m.src=A('berlari.png')}},720);
+}
+document.addEventListener('keydown',e=>{if(!$('play').classList.contains('active')||mission!==3)return;if(['ArrowLeft','ArrowRight',' ','ArrowUp'].includes(e.key))e.preventDefault();if(e.key==='ArrowLeft')move(-5);if(e.key==='ArrowRight')move(5);if(e.key===' '||e.key==='ArrowUp')jump()});
+function renderM4(area,q){
+ const guide=document.createElement('p');guide.className='help';guide.textContent='Klik organisme pertama lalu organisme kedua untuk membuat panah. Semua organisme boleh dihubungkan tanpa petunjuk benar/salah. Tekan Periksa Jawaban setelah selesai. Panah menunjukkan perpindahan energi dari yang dimakan menuju pemakannya.';
+ const stage=document.createElement('div');stage.className='webStage';
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('webArrows');svg.setAttribute('aria-hidden','true');
+ const defs=document.createElementNS('http://www.w3.org/2000/svg','defs');const marker=document.createElementNS('http://www.w3.org/2000/svg','marker');marker.setAttribute('id','arrowhead');marker.setAttribute('markerWidth','10');marker.setAttribute('markerHeight','10');marker.setAttribute('refX','8');marker.setAttribute('refY','3');marker.setAttribute('orient','auto');marker.setAttribute('markerUnits','strokeWidth');const tip=document.createElementNS('http://www.w3.org/2000/svg','path');tip.setAttribute('d','M0,0 L0,6 L9,3 z');tip.setAttribute('fill','#24853d');marker.appendChild(tip);defs.appendChild(marker);svg.appendChild(defs);
+ const grid=document.createElement('div');grid.className='webnodes';const status=document.createElement('p');status.className='webStatus';status.setAttribute('aria-live','polite');
+ const links=document.createElement('div');links.className='links';links.id='linkList';
+ function paint(){
+  grid.querySelectorAll('button').forEach(b=>b.classList.toggle('selected',b.dataset.name===webFirst));
+  status.textContent=webFirst?'Dipilih: '+webFirst+'. Sekarang pilih organisme yang memakannya.':'Hubungan dibuat: '+webLinks.length+'. Tentukan sendiri hubungan yang tepat, lalu tekan Periksa Jawaban.';
+  links.replaceChildren();
+  if(!webLinks.length)links.textContent='Belum ada garis. Klik dua organisme untuk menghubungkannya.';
+  webLinks.forEach(([a,b],i)=>{const chip=document.createElement('button');chip.className='webLinkChip';chip.textContent=a+' → '+b+'  ✕';chip.title='Klik untuk menghapus hubungan';chip.disabled=answered;chip.onclick=()=>{webLinks.splice(i,1);paint();play('click')};links.appendChild(chip)});
+  drawArrows();
+ }
+ function drawArrows(){
+  svg.querySelectorAll('line').forEach(x=>x.remove());const base=stage.getBoundingClientRect();if(!base.width)return;
+  svg.setAttribute('viewBox',`0 0 ${base.width} ${base.height}`);
+  for(const [a,b] of webLinks){const from=grid.querySelector(`[data-name="${a}"]`),to=grid.querySelector(`[data-name="${b}"]`);if(!from||!to)continue;
+   const f=from.getBoundingClientRect(),t=to.getBoundingClientRect();const x1=f.left+f.width/2-base.left,y1=f.top+f.height/2-base.top,x2=t.left+t.width/2-base.left,y2=t.top+t.height/2-base.top;
+   const dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1;const r1=Math.min(f.width,f.height)*.34,r2=Math.min(t.width,t.height)*.36;
+   const line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('x1',x1+dx/len*r1);line.setAttribute('y1',y1+dy/len*r1);line.setAttribute('x2',x2-dx/len*r2);line.setAttribute('y2',y2-dy/len*r2);line.setAttribute('stroke','#24853d');line.setAttribute('stroke-width','4');line.setAttribute('stroke-linecap','round');line.setAttribute('marker-end','url(#arrowhead)');svg.appendChild(line);
+  }
+ }
+ q.nodes.forEach(name=>{const b=document.createElement('button');b.type='button';b.className='tile webTile';b.dataset.name=name;b.append(imgEl(name),document.createTextNode(name));b.onclick=()=>{
+  if(answered)return;
+  if(!webFirst){webFirst=name;status.classList.remove('bad')}
+  else if(webFirst===name){webFirst=null}
+  else {const a=webFirst,edge=a+'|'+name;webFirst=null;
+   if(webLinks.some(x=>x.join('|')===edge)){status.textContent='Garis tersebut sudah ada.';play('wrong');return}
+   webLinks.push([a,name]);play('drop');status.classList.remove('bad');
+  }
+  paint();
+ };grid.appendChild(b)});
+ stage.append(grid,svg);area.append(guide,stage,status,links);
+ const tools=document.createElement('div');tools.className='row';
+ const undo=document.createElement('button');undo.className='btn alt';undo.textContent='↶ Batalkan Garis Terakhir';undo.onclick=()=>{if(answered)return;webLinks.pop();webFirst=null;paint()};
+ const reset=document.createElement('button');reset.className='btn alt';reset.textContent='↻ Hapus Semua Garis';reset.onclick=()=>{if(answered)return;webLinks=[];webFirst=null;paint()};tools.append(undo,reset);area.appendChild(tools);
+ // Redraw arrows after layout and whenever the game is resized.
+ requestAnimationFrame(drawArrows);
+ const observer=new ResizeObserver(()=>{if(stage.isConnected)drawArrows();else observer.disconnect()});observer.observe(stage);
+ paint();
+}
+function checkAnswer(){if(answered)return;const q=qNow();let good=false;if(mission===1){if(selected.size!==q.answers.length){$('feedback').textContent='Pilih '+q.answers.length+' objek terlebih dahulu.';play('wrong');return}good=q.answers.every(x=>selected.has(x))}if(mission===2){if(placed.filter(Boolean).length!==q.answer.length){$('feedback').textContent='Isi semua kotak terlebih dahulu.';play('wrong');return}good=q.answer.every((x,i)=>placed[i]===x)}if(mission===4){if(webLinks.length===0){$('feedback').textContent='Buat setidaknya satu hubungan sebelum memeriksa jawaban.';play('wrong');return}good=webLinks.length===q.answer.length&&q.answer.every(([a,b])=>webLinks.some(([x,y])=>x===a&&y===b))}finish(good,false)}
+function finish(good,timeout){if(answered)return;answered=true;stopTimer();if(good){points+=5;play('correct')}else play(timeout?'timeout':'wrong');$('score').textContent='⭐ '+points+' / 25';$('feedback').className='feedback '+(good?'ok':'bad');$('feedback').textContent='';const fb=$('mascotFeedback');fb.classList.remove('hidden','wrong');if(!good)fb.classList.add('wrong');$('feedbackMascot').src=A(good?'menang-berhasil.png':'bingung-salah.png');$('feedbackMascot').alt=good?'Si Pari gembira':'Si Pari memberikan semangat';$('feedbackTitle').textContent=good?'🌟 Hebat! Jawaban benar!':timeout?'⏰ Waktu habis!':'🌱 Belum tepat, ayo belajar!';$('feedbackCaption').textContent=good?'Kamu mendapat 5 poin.':timeout?'Tidak apa-apa, pahami penjelasannya untuk soal berikutnya.':'Perhatikan penjelasan Si Pari berikut ini.';$('feedbackExplanation').textContent=qNow().exp;fb.scrollIntoView({behavior:'smooth',block:'nearest'});$('check').classList.add('hidden');$('next').classList.remove('hidden');$('playArea').querySelectorAll('button').forEach(b=>b.disabled=true)}
+function nextQuestion(){if(index<4){index++;loadQuestion()}else{scores[mission]=Math.max(scores[mission]||0,points);localStorage.setItem('sipariScores',JSON.stringify(scores));$('resultName').textContent='Hebat, '+student+'!';$('resultScore').textContent=points+' / 25';$('resultMessage').textContent='Kamu sudah menyelesaikan Misi '+mission+': '+missionNames[mission]+'. '+(mission<4?'Si Pari siap berjalan menuju pos selanjutnya!':'Seluruh pos petualangan sudah dijelajahi!');pendingMapTravel=mission<4?{from:mission}:null;go('result');play('win')}}
+function exitMission(){if(confirm('Keluar dari misi? Jawaban misi yang sedang berlangsung tidak akan disimpan.'))go('map')}
+function showFinal(){reportStatus('Tekan Kirim Nilai ke Guru setelah keempat misi selesai.');$('sendScoreBtn').textContent='📤 Kirim Nilai ke Guru';$('finalName').textContent=student||'Penjelajah Ekosistem';const total=[1,2,3,4].reduce((n,m)=>n+(scores[m]||0),0);$('finalBreakdown').innerHTML='';for(let m=1;m<=4;m++){const p=document.createElement('p');p.textContent='Misi '+m+' — '+missionNames[m]+': '+(scores[m]??'Belum dimainkan')+(scores[m]===undefined?'':' / 25');$('finalBreakdown').appendChild(p)}$('finalScore').textContent=total+' / 100';$('finalMessage').textContent=Object.keys(scores).length===4?'Selamat! Keempat misi sudah kamu mainkan.':'Masih ada misi yang belum dimainkan. Ayo selesaikan!';go('final')}
+function downloadResult(){const total=[1,2,3,4].reduce((n,m)=>n+(scores[m]||0),0);const lines=['HASIL MISI SI PARI','Nama: '+student,'',''+[1,2,3,4].map(m=>'Misi '+m+' ('+missionNames[m]+'): '+(scores[m]??'Belum dimainkan')+'/25').join('\n'),'','Total: '+total+'/100','Refleksi: '+$('reflection').value];const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='Hasil_Misi_Si_Pari.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}
+
+// REKAP GURU - URL disetel oleh guru pada config.js.
+// Permintaan dikirim via form POST ke Apps Script, kemudian diverifikasi dengan status JSONP token acak.
+let reportBusy=false, reportPollTimer=null, reportPollCount=0;
+function reportEndpoint(){return (window.SIPARI_REKAP_URL||'').trim()}
+function reportToken(){let t=localStorage.getItem('sipariReportToken');if(!t){t=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():('sipari-'+Date.now()+'-'+Math.random().toString(36).slice(2));localStorage.setItem('sipariReportToken',t)}return t}
+function reportStatus(message,kind){const el=$('reportStatus');if(!el)return;el.textContent=message;el.className='reportStatus '+(kind||'')}
+function getReportData(){return {token:reportToken(),nama:student.trim().slice(0,45),misi1:String(scores[1]),misi2:String(scores[2]),misi3:String(scores[3]),misi4:String(scores[4]),total:String([1,2,3,4].reduce((v,m)=>v+(Number(scores[m])||0),0)),refleksi:$('reflection').value.trim().slice(0,500)}}
+function sendScoreToTeacher(){
+ if(reportBusy)return;
+ if(completedCount()!==4){reportStatus('Selesaikan semua 4 misi sebelum mengirim nilai.','error');return}
+ if(!student.trim()){reportStatus('Nama siswa belum diisi.','error');return}
+ const endpoint=reportEndpoint();if(!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint)){reportStatus('Rekap guru belum dikonfigurasi. Guru perlu mengisi URL di config.js.','error');return}
+ if(!navigator.onLine){reportStatus('Perangkat sedang offline. Hubungkan internet lalu tekan Kirim Nilai lagi.','error');return}
+ reportBusy=true;reportPollCount=0;$('sendScoreBtn').disabled=true;reportStatus('Mengirim nilai dan menunggu konfirmasi dari Google Sheets…');
+ const form=document.createElement('form');form.method='POST';form.action=endpoint;form.target='sipariSubmitFrame';form.style.display='none';
+ const payload=getReportData();for(const [key,value] of Object.entries(payload)){const field=document.createElement('input');field.type='hidden';field.name=key;field.value=value;form.appendChild(field)}
+ document.body.appendChild(form);form.submit();form.remove();
+ if(reportPollTimer)clearInterval(reportPollTimer);
+ reportPollTimer=setInterval(checkReportReceipt,1900);
+}
+function checkReportReceipt(){
+ if(!reportBusy)return;
+ reportPollCount++;
+ if(reportPollCount>12){stopReportPoll();reportStatus('Belum menerima konfirmasi. Periksa koneksi dan Google Sheets guru, lalu coba kirim lagi. Data tidak akan digandakan jika token sama.','error');return}
+ const script=document.createElement('script');const token=encodeURIComponent(reportToken());
+ script.src=reportEndpoint()+'?action=status&token='+token+'&callback=sipariReportReceipt&_='+Date.now();
+ script.async=true;script.onerror=()=>script.remove();script.onload=()=>script.remove();document.head.appendChild(script);
+}
+function stopReportPoll(){reportBusy=false;if(reportPollTimer)clearInterval(reportPollTimer);reportPollTimer=null;const b=$('sendScoreBtn');if(b)b.disabled=false}
+window.sipariReportReceipt=function(result){
+ if(!reportBusy||!result||result.token!==reportToken())return;
+ if(result.found){stopReportPoll();reportStatus('✅ Nilai berhasil tercatat di Google Sheets guru!','success');$('sendScoreBtn').textContent='✓ Nilai Sudah Terkirim'}
+};
+
+
+
+// Dashboard publik hanya-baca: tidak memiliki operasi edit atau hapus.
+let publicScores=[];
+function openPublicDashboard(){go('dashboard');loadPublicDashboard()}
+function loadPublicDashboard(){
+ const endpoint=reportEndpoint();const status=$('dashStatus');
+ if(!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint)){status.textContent='URL rekap belum dikonfigurasi.';return}
+ status.textContent='Memuat rekap dari Google Sheets…';
+ const old=$('sipariPublicJSONP');if(old)old.remove();
+ const script=document.createElement('script');script.id='sipariPublicJSONP';
+ script.src=endpoint+'?action=public_scores&callback=sipariPublicScores&_='+Date.now();
+ script.onerror=()=>{status.textContent='Rekap gagal dimuat. Pastikan kode Apps Script versi baru sudah diterapkan.';script.remove()};
+ document.head.appendChild(script);
+}
+window.sipariPublicScores=function(data){
+ publicScores=Array.isArray(data&&data.rows)?data.rows:[];
+ $('dashStatus').textContent='Rekap diperbarui: '+publicScores.length+' pengiriman nilai.';
+ renderPublicDashboard();
+};
+function renderPublicDashboard(){
+ const search=($('dashSearch').value||'').toLocaleLowerCase('id');
+ const rows=publicScores.filter(r=>String(r.nama||'').toLocaleLowerCase('id').includes(search));
+ const tbody=$('dashRows');tbody.replaceChildren();
+ for(const r of rows){const tr=document.createElement('tr');for(const key of ['waktu','nama','misi1','misi2','misi3','misi4','total']){const td=document.createElement('td');td.textContent=String(r[key]??'');tr.appendChild(td)}tbody.appendChild(tr)}
+ if(!rows.length){const tr=document.createElement('tr');const td=document.createElement('td');td.colSpan=7;td.textContent='Belum ada data yang cocok.';tr.appendChild(td);tbody.appendChild(tr)}
+ const nums=publicScores.map(r=>Number(r.total)).filter(Number.isFinite);
+ const stats=[['Pengiriman',publicScores.length],['Rata-rata',nums.length?(nums.reduce((a,b)=>a+b,0)/nums.length).toFixed(1):'-'],['Tertinggi',nums.length?Math.max(...nums):'-'],['Terendah',nums.length?Math.min(...nums):'-']];
+ $('dashSummary').replaceChildren();for(const [k,v] of stats){const span=document.createElement('span');span.textContent=k+': '+v;$('dashSummary').appendChild(span)}
+}
+function exportPublicDashboard(){
+ if(!publicScores.length){$('dashStatus').textContent='Belum ada data untuk diunduh.';return}
+ const keys=['waktu','nama','misi1','misi2','misi3','misi4','total'];
+ const safe=v=>{let x=String(v??'');if(/^[=+@\-]/.test(x))x="'"+x;return '"'+x.replace(/"/g,'""')+'"'};
+ const csv='\uFEFF'+[['Waktu','Nama siswa','Misi 1','Misi 2','Misi 3','Misi 4','Total / 100'].map(safe).join(','),...publicScores.map(r=>keys.map(k=>safe(r[k])).join(','))].join('\r\n');
+ const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='Rekap_Misi_Si_Pari.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)
+}
+</script></body></html>

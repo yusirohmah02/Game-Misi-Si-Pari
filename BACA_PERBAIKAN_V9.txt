@@ -1,0 +1,7 @@
+MISI SI PARI V9 — ANIMASI IKON DAN MUSIK MP3
+
+Ikon organisme, kartu, peta petualangan dan dekorasi bergerak lembut.
+Tombol Musik memutar MP3 asli dari folder suara; musik mulai setelah tombol ditekan.
+URL Google Apps Script guru pada config.js dipertahankan dan sintaksnya diperbaiki.
+Untuk HP siswa, unggah ulang folder game lengkap ke Netlify.
+Uji pengiriman nilai ke Google Sheets sebelum digunakan siswa.
